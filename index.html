@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="./download.png" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#008C94" >
+    <meta name="description" content="A Avatar Finder Tool">
+    <title>Avatar Finder</title>
+     <!-- Facebook Meta Tags -->
+     <meta property="og:url" content="https://rghvgrv.github.io/AvatarFinder">
+     <meta property="og:type" content="website">
+     <meta property="og:title" content="Avatar Finder">
+     <meta property="og:description" content="A Avatar Finder Tool">
+     <meta property="og:image" content="https://ibb.co/Qcb9nRv" alt="profile-pic-1">
+     
+     <!-- Twitter Meta Tags -->
+     <meta name=" twitter:card" content="summary_large_image">
+     <meta property="twitter:domain" content="https://github.com/rghvgrv">
+     <meta property="twitter:url" content="https://rghvgrv.github.io/AvatarFinder">
+     <meta name="twitter:title" content="Avatar Finder">
+     <meta name="twitter:description" content="A Avatar Finder Tool">
+     <meta name="twitter:image" content="https://ibb.co/Qcb9nRv" alt="profile-pic-1">
+</head>
+
+<body>
+    <section>
+        <h1>
+            WHAT DOES YOUR AVATAR LOOK LIKE </h1>
+        <div class="centerdiv">
+            <div class="name">
+                <label for="">Enter Your Name :- </label>
+                <input type="text" name="" id="nameid">
+            </div>
+            <div class="image">
+                <img src="./baby-shower.png" alt="" width="200" height="200" id="imgchnge">
+            </div>
+            <button id="clicked">
+                Click Here...
+            </button>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#clicked').click(function () {
+                const nameuser = $('#nameid').val();
+                if (nameuser === ""){
+                    alert("Enter a Name")
+                }
+                else{
+                $('#imgchnge').attr('src',`https://joeschmoe.io/api/v1/${nameuser}`);
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
